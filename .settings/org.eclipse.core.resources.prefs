@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/jsp/pedidos/cadastraItem.jsp=UTF-8
+encoding//WebContent/WEB-INF/jsp/pedidos/listaItem.jsp=UTF-8
+encoding//src/br/com/caelum/vraptor/controller/PedidosController.java=UTF-8
+encoding//src/br/com/caelum/vraptor/loja/Item.java=UTF-8
+encoding//src/br/com/caelum/vraptor/test/CalculaValorTotalTeste.java=UTF-8
