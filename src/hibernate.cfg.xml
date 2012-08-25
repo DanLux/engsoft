@@ -7,10 +7,9 @@
             root
         </property>
         <property name="hibernate.connection.password">
-        	root
         </property>
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost/engsoft
+            jdbc:mysql://localhost/ep1-esw
         </property>
         <property name="hibernate.connection.driver_class">
             com.mysql.jdbc.Driver
