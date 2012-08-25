@@ -47,23 +47,28 @@ public class PedidosController {
 
 	public void formulario() {
 	}
+	
+	public void erro(Long id) {
+		
+	}
 
 	public void adicionaItem(Long id, final Item item) {
-		/*
-		 * if (item.getDescricao() == null || item.getDescricao().length() < 3
-		 * || item.getDescricao().length() > 50) { validator.add(new
-		 * ValidationMessage(
-		 * "Item adicionado deve possuir descrição. Limite de 50 caracteres.",
-		 * null)); } else if (item.getPreco() == null || item.getPreco() <= 0) {
-		 * validator.add(new ValidationMessage(
-		 * "Item adicionado deve possuir preço positivo.", null)); }
-		 * 
-		 * else if (item.getQuantidade() <= 0) { validator.add(new
-		 * ValidationMessage(
-		 * "Item adicionado deve possuir quantidade positiva.", null)); }
-		 * validator.onErrorUsePageOf(PedidosController.class)
-		 * .cadastraItem(id);
-		 */
+		if (item.getDescricao() == null || item.getDescricao().length() < 3
+				|| item.getDescricao().length() > 50) {
+			validator
+					.add(new ValidationMessage(
+							"Item adicionado deve possuir descri&ccedil;&atilde;o. Limite de 50 caracteres.",
+							null));
+		} else if (item.getPreco() == null || item.getPreco() <= 0) {
+			validator.add(new ValidationMessage(
+					"Item adicionado deve possuir pre&ccedil;o positivo.", null));
+		}
+
+		else if (item.getQuantidade() <= 0) {
+			validator.add(new ValidationMessage(
+					"Item adicionado deve possuir quantidade positiva.", null));
+		}
+		validator.onErrorUsePageOf(PedidosController.class).erro(id);
 
 		Pedido pedido = dao.carrega(id);
 		item.setPedido(pedido);
